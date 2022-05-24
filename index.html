@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Smiley/Frowney</title>
+    <style>
+        body {
+            background-color: lightgray;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            background-color: dodgerblue;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            color: dodgerblue;
+        }
+
+        #image_container{
+            height: 400px;
+            width: 400px;
+            margin: 20px;
+        }
+        .straight_face{
+            max-height: 100%;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Smiley/Frowney</h1>
+        <div id="button_container">
+            <button onclick="smiley()">
+                SMILEY
+            </button>
+            <button onclick="frowney()">
+                FROWNEY
+            </button>
+        </div>
+        <div id="image_container">
+            <img id="face" class="straight_face" src="images/neutral_emoji.jpg"  alt="Neutral Face"/>
+        </div>
+    </div>
+    <script>
+        const smiley = () => {
+            alert('I am happy! :)');
+            document.getElementById('face').src = "images/happy_emoji.jpg";
+        }
+        const frowney = () => {
+            alert('I am sad...  :(');
+            document.getElementById('face').src = "images/sad_emoji.jpg";
+        }
+    </script>
+</body>
+</html>
